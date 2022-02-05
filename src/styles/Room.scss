@@ -1,0 +1,137 @@
+.room-container {
+    .content {
+        nav {
+            // HEIGHT - 50px
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .longArrow {
+                font-size: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 0rem;
+                
+                i {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .messages-container {
+            height: calc(100vh - 50px - 60px - 4rem);
+            // background: red;
+            overflow: scroll;
+
+            // .messages {
+                .message {
+                    width: 100%;
+                    margin: .25rem 0rem;
+
+                    .message-content {
+                        color: $white;
+                        background: $pink;
+                        border-radius: $border-radius;
+                        padding: 1rem;
+                        max-width: 300px;
+
+                        .author {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+
+                            figure {
+                                margin-bottom: 0rem;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                                overflow: hidden;
+                                border: 2px solid $white;
+
+                                img {
+                                    width: 100%;
+                                }
+                            }
+
+                            span {
+                                display: inline-block;
+                                margin-left: 5px;
+                                font-size: 1rem;
+                                opacity: 1;
+                            }
+                        }
+
+                        p {
+                            margin: .5rem 0rem;
+                        }
+
+                        span {
+                            opacity: .75;
+                            font-size: .8rem;
+                            width: 100%;
+                            display: flex;
+                            justify-content: flex-end;
+                        }
+                    }
+                    &.owned {
+                        display: flex;
+                        justify-content: flex-end;
+                        .message-content {
+                            background: $blue;
+                        }
+                    }
+                }
+            // }
+        }
+
+        .foot {
+            height: 60px;
+            background: $primary;
+            padding: 1rem;
+            border-radius: $border-radius;
+            display: flex;
+
+            input {
+                margin-left: 0px !important;
+                border-top-left-radius: $border-radius !important;
+                border-bottom-left-radius: $border-radius !important;
+                padding: 0.25rem;
+                height: 30px;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                width: 100%;
+                box-shadow: 0 0 0 0.25rem transparent !important;
+                transition: .3s;
+                // max-width: 300px;
+
+                &:focus {
+                    box-shadow: 0 0 0 0.25rem #86b7fe !important;
+                }
+            }
+
+            button {
+                padding: 0.5rem;
+                height: 30px;
+                border-radius: 5px;
+                background: $blue;
+                color: $white;
+                outline: none;
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: .3s;
+                margin-left: 10px;
+
+                &:hover,
+                &:focus {
+                    background: darken($blue, 10%);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

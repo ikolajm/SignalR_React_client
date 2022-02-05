@@ -1,0 +1,73 @@
+.modal-content {
+    background: $primary;
+    color: $white;
+
+    .modal-header {
+        button {
+            color: $white !important;
+        }
+    }
+
+    .modal-body {
+        p {
+            span {
+                font-weight: bold;
+            }
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: .5rem;
+
+            label {
+                margin-bottom: .25rem;
+            }
+
+            input {
+                margin-left: 0px !important;
+                border-top-left-radius: $border-radius !important;
+                border-bottom-left-radius: $border-radius !important;
+                padding: 0.25rem;
+                height: 30px;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                width: 100%;
+                box-shadow: 0 0 0 0.25rem transparent !important;
+                transition: .3s;
+
+                &:focus {
+                    box-shadow: 0 0 0 0.25rem #86b7fe !important;
+                }
+            }
+        }
+    }
+
+    .modal-footer {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            border: none;
+            outline: none;
+            &:first-of-type {
+                background: $error;
+
+                &:hover,
+                &:focus {
+                    background: darken($error, 10%);
+                }
+            }
+
+            &:last-of-type {
+                background: $blue;
+
+                &:hover,
+                &:focus {
+                    background: darken($blue, 10%);
+                }
+            }
+        }
+    }
+}

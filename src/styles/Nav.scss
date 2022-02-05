@@ -1,0 +1,99 @@
+nav {
+    border-radius: $border-radius;
+    background: $primary;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 50px;
+
+    a {
+        text-decoration: none !important;
+        color: $white;
+        transition: .3s;
+        h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0rem;
+        
+        }
+
+        &:hover,
+        &:focus {
+            color: darken($blue, 10%);
+        }
+    }
+
+    .dropdown {
+        display: flex;
+        align-items: center;
+        position: relative;
+        float: right;
+
+        .dropdown-button {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: $white;
+
+            &:hover {
+                color: darken($white, 10%);
+            }
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: $error;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 3;
+            border-radius: $border-radius;
+            top: 2rem;
+            border: 2px solid $white;
+
+            a {
+                display: block;
+                width: 100%;
+                padding: .5rem;
+                transition: .3s;
+                // border-radius: $border-radius;
+                background: $blue;
+                text-align: center;
+
+                i {
+                    margin-right: 5px;
+                }
+
+                &:hover  {
+                    background: darken($blue, 10%);
+                    color: darken($white, 10%);
+                }
+            }
+
+            button {
+                width: 100%;
+                outline: none;
+                border: none;
+                color: $white;
+                background: $error;
+                padding: .5rem;
+                // border-radius: $border-radius;
+                transition: .3s;
+
+                i {
+                    margin-right: 5px;
+                }
+
+                &:hover  {
+                    background: darken($error, 10%);
+                    color: darken($white, 10%);
+                }
+            }
+
+            &.show {display:block;}
+        }
+    }
+}

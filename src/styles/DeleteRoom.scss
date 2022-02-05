@@ -1,0 +1,78 @@
+.delete-container {
+    .content {
+        height: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        form {
+            max-width: 350px;
+            background: $primary;
+            color: $white;
+            padding: 1rem;
+            border-radius: $border-radius;
+
+            h1 {
+                font-size: 2rem;
+                margin-bottom: .5rem;
+            }
+
+            span {
+                font-weight: bold;
+            }
+
+            .delete-link {
+                color: $white;
+                text-decoration: none;
+                font-weight: bold;
+                transition: .3s;
+
+                &:hover,
+                &:focus {
+                    color: $error;
+                }
+            }
+
+            .form-footer {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                a {
+                    margin-bottom: 0rem;
+                    text-decoration: none;
+                    transition: .3s;
+                    color: $white;
+
+                    &:hover,
+                    &:focus {
+                        color: darken($blue, 10%)
+                    }
+                }
+
+                button {
+                    padding: 0.5rem;
+                    height: 30px;
+                    border-radius: 5px;
+                    background: $error;
+                    color: $white;
+                    outline: none;
+                    border: none;
+                    width: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: .3s;
+
+                    &:hover,
+                    &:focus {
+                        background: darken($error, 10%);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

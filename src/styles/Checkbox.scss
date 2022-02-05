@@ -1,0 +1,10 @@
+.passEnabled {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+
+    input {
+        margin-left: 10px;
+    }
+}

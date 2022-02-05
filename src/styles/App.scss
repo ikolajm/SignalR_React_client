@@ -1,0 +1,85 @@
+$primary: #F6BD60;
+$pink: #F5CAC3;
+$sea: #84A59D;
+$background:  #F7EDE2;
+$white: #f3f3f3;
+$blue: #86b7fe;
+$success: #53DD6C;
+$error: #D64045;
+$border-radius: 5px;
+
+body {
+    background: $background;
+}
+
+.login-container,
+.singup-container,
+.rooms-container,
+.room-container,
+.create-container,
+.edit-container,
+.delete-container,
+.profile-container {
+    position: relative;
+    background: $background;
+    min-height: 100vh;
+    height: 100%;
+
+    .background-overlay {
+        position: absolute;
+        width: 100vw;
+        min-height: 100vh;
+        height: 100vh;
+        background: url('../assets/brushed-alum.png');
+        opacity: .5;
+        z-index: 1;
+    }
+
+    .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+@import '~react-toastify/dist/ReactToastify.min.css';
+.Toastify__toast--success {
+    color: $white !important;
+    background: $success !important;
+}
+
+.Toastify__toast--error {
+    color: $white !important;
+    background: $error !important
+}
+
+.Toastify__toast-icon svg {
+    fill: $white !important;
+}
+
+.Toastify__close-button svg {
+    color: $white !important;
+}
+
+.Toastify__close-button:hover {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.Toastify__close-button:hover svg {
+    opacity: 1
+}
+
+@import './Auth.scss';
+@import './Nav.scss';
+@import './Rooms.scss';
+@import './Room.scss';
+@import './CreateRoom.scss';
+@import './EditRoom.scss';
+@import './DeleteRoom.scss';
+@import './EditProfile.scss';
+@import './Modal.scss';
+@import './Checkbox.scss';
