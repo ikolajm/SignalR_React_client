@@ -16,7 +16,10 @@ export default () => {
     let loggedIn = CurrentUser?.token !== null && CurrentUser?.id !== null && CurrentUser?.uuid !== null
 
     if (loggedIn) {
+        // console.log(CurrentUser)
         return <Navigate to='/rooms' />
+    } else {
+        // console.log(CurrentUser)
     }
 
     return (

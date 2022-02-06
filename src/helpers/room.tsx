@@ -121,7 +121,7 @@ const submitMessage = async (e: any, messageObj: any, messages: any) => {
     if (data && data.message) {
         let newMessages: any = [...messages];
         newMessages.push(data.message)
-        return newMessages;
+        return {status: "success", newMessages};
     } else {
         toast.error(data.message)
     }
